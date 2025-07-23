@@ -15,7 +15,6 @@ A fun and interactive web app that lets users generate random hex color codes wi
 - JavaScript (Vanilla)
 - Boxicons & Google Fonts
 
-## 🔗 Live Demo
-[Coming soon via GitHub Pages...]
+## 🔗 Live Demo https://kushal57-2005.github.io/hex-code-generator/
 
 ## 📂 Project Structure
