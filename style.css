@@ -1,0 +1,162 @@
+body {
+    height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .container {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(https://marketplace.canva.com/EAD2962NKnQ/2/0/1600w/canva-rainbow-gradient-pink-and-purple-virtual-background-_Tcjok-d9b4.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+  }
+  
+  .title {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .box {
+    width: 90%;
+    max-width: 400px;
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.2);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+  
+  .night-mode {
+    height: 2.5em;
+    width: 5em;
+    background-color: white;
+    border-radius: 2.5em;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0.25em;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    z-index: 1;
+    
+  }
+  
+  .toggle {
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    background-color: rgb(236, 236, 99);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .night-mode.active .toggle {
+    transform: translateX(2.5em);
+  }
+  
+  .color-box {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background-color: white;
+    margin-top: 3.5rem;
+    position: relative;
+    transition: background-color 0.4s ease;
+    border-radius: 0.5rem;
+  }
+  
+  .hexcode {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    padding: 0.25rem 0.5rem;
+    background-color: rgba(0, 0, 0, 0.25);
+    color: white;
+    font-size: 0.875rem;
+    border-radius: 0.25rem;
+  }
+  
+  .hex {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 0.375rem;
+    border: none;
+    background-color: #f0f0f0;
+    transition: background-color 0.3s;
+  }
+  
+  .button:hover {
+    background-color: ivory;
+    border: 0.5px solid blue;
+  }
+  
+  .button:active {
+    background-color: lightblue;
+    border: 0.5px solid blue;
+  }
+  
+  .bxs-moon {
+    color: black;
+    font-size: 1.2rem;
+  }
+  
+  body.dark .container {
+    background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBw8NDQ0NDQ0PDQ0NDQ0NDQ0NDQ8NDQ0NFREWFhURFRUYHSggGBolGxUVITEhJSkrLi4uFx8zODMtNygtLisBCgoKDQ0NDw0NDysZFRkrKystNysrKy03LS0tLSsrKy0rNy0rNys3KystKysrKysrKy0rKysrKysrKysrKysrK//AABEIALcBEwMBIgACEQEDEQH/xAAaAAEBAQADAQAAAAAAAAAAAAABAAIDBQYE/8QAGBABAQEBAQAAAAAAAAAAAAAAAAER8DH/xAAaAQEBAQEBAQEAAAAAAAAAAAABAAIDBAUG/8QAGBEBAQEBAQAAAAAAAAAAAAAAABEBAhL/2gAMAwEAAhEDEQA/APBIJ9x+dKCGlJJlBKhnSqEKCKzTWay1irNNZtDWCs02s0N4zWa1Wam8YrNarNTWCstVlNis0hNYyDQGhQQjgSQ10xJKBspIFJAp6QDU9r4RQQ1HQtDKOhC1nSgtZBhrNVoo1rBWaazWWsFZprNDeCs01mprBWK1Wam8FZpoqawVmmiprBQayGhUqE1iQI1rECKHQ6WVEikEXokyte18NpM6NGmNatZWsqHRotGsmGi0WgGG1m1Ws0NZh1m1M0RrMVZprNDWC1mq0BvBWabWU1irJrKaxClmprACARQaE0EkmsSqTLWakkmlqCSegWsrXtfHh1azq1nVGtGjWdBjWgaLWVDqtZ0WhqGijRoMNrNVrNoazFWbTaxaGsxCqs2hrFazTQm8AVCKrNNCawAhEUEUFAigogrWgUg2Ekk7vVrOjXrr5Ua1azq0KNaLRo0GNaNGjWVDaFo1GLRaNGhqG0WgWgxWs2q0UNZitZtVooaxUIVNKhBFVmmhFMlIgGgFAigpJLWsSSDWHvAki7bVrOrXor5sa1azo1VRrVrOrQo0tY0aDGtGjRophtFo1aDFotATUNrK0AoIIoFlNIVUIoJIoHQCEkihSAkRCtaCKDYRSTsNWsatdq8Eb1axq0VRrVrOrVTGtGjRoqjWgJGG0BaFEFoRQtQRVCSIoITQRCIRxYDGUcWIxlVrBgMCw4sTWYg1iwNRnCUjAiko+nVrOrW68Ua1azq0KNLWdWqqNatZ1alGtGs6kYbVoBR1BIxJINZyFYcOKtZyxhxrFgrecM4MbxYK3nLODG8WKnyxgxyYMFPljBjeLFV5YxNioxnDhSMGLEkokki1q0I14YdWhaqo1o0ako0tZJR1BJQpYlTmIoit5ypESq6Zyzhw4RXTOWcOHDgrWcsrGsWKtZyxixvFgp8sYMbxYqfLjxY3YMVHljFjeDFV5YxY0sVXlnFjWLEozhIVUcaZWmvA1q0alVCWdOmo6gSoTAYqcwmAwV0zkwxQit5ixEyCumYJDhMVbzkYcJxmumcs4saQrWcs4sbwYq15ZwY3gxDyxYMbwVVRmwY3gw0RjFjVgQjOLGghBgaSUfMlqL5qSSRQJRMZhRzGoRDIq3hjUZjUVdMwxoKBvMLQhkDpmGFNQOmYMakUhkDpmLFhWJvORiaxYGvLCxqwWFeWcGNVJnccdgbsFLO4wjgTMGDGkhGcRSUfGgmny2kkgiEkYYkW8ajUSDeGRoIN4Y0km8ahiQdcahiSdMahKDrypDiQbw4sCDasCSAsZSLIFSLOis0osMpJMrUkk//Z)
+  }
+  
+  body.dark .color-box {
+    background-color: #555;
+  }
+  
+  body.dark .box {
+    box-shadow: 0 0.5rem 2rem rgba(200, 200, 200, 0.2);
+  }
+  
+  body.dark .night-mode {
+    background-color: black;
+  }
+  
+  body.dark .toggle {
+    background-color: darkblue;
+  }
+  
+  body.dark .bxs-moon {
+    color: white;
+  }
+  
+  body.dark .title {
+    color: violet;
+  }
+  
